@@ -31,46 +31,66 @@
         //}
 
 
+        //static void Main(string[] args)
+        //{
+
+        //    Temp t = new Temp();
+
+        //    //Console.WriteLine(t.num);
+        //    int[] arr = { 8, 5, 4 };
+
+        //    Array.Reverse(arr);
+
+        //    double x = Math.Pow(arr[0], 2);
+        //    Console.WriteLine(x);
+
+        //}
+        //class Temp
+        //{
+
+        //    public int num = 2;
+
+        //    public Temp() { num++; }
+
+        //    ~Temp() { num++; }
+
+        //}
+        //class Clients
+        //{
+        //    private string[] names = new string[10];
+
+        //    public string this[int index]
+        //    {
+        //        get
+        //        {
+        //            return names[index];
+        //        }
+        //        set
+        //        {
+        //            names[index] = value;
+        //        }
+        //    }
+        //}
         static void Main(string[] args)
         {
-
-            Temp t = new Temp();
-
-            //Console.WriteLine(t.num);
-            int[] arr = { 8, 5, 4 };
-
-            Array.Reverse(arr);
-
-            double x = Math.Pow(arr[0], 2);
-            Console.WriteLine(x);
-
-        }
-        class Temp
-        {
-
-            public int num = 2;
-
-            public Temp() { num++; }
-
-            ~Temp() { num++; }
-
-        }
-        class Clients
-        {
-            private string[] names = new string[10];
-
-            public string this[int index]
-            {
-                get
-                {
-                    return names[index];
-                }
-                set
-                {
-                    names[index] = value;
-                }
-            }
+            ISomeFunc obj = new SomeObject();
+            obj.Greet();
         }
     }
-
+    public interface ISomeFunc
+    {
+        void Greet()
+        {
+            Console.Write("Hello!");
+        }
     }
+    class SomeObject : ISomeFunc
+    {
+        void Greet()
+        {
+            Console.Write("Hi!");
+        }
+    }
+    
+
+}

@@ -73,8 +73,21 @@
         //}
         static void Main(string[] args)
         {
-            ISomeFunc obj = new SomeObject();
-            obj.Greet();
+            int x = 0;
+            try
+            {
+                x /= x;
+                x += 1;
+            }
+            catch (Exception e)
+            {
+                x += 3;
+            }
+            finally
+            {
+                x += 4;
+                Console.WriteLine(x);
+            }
         }
     }
     public interface ISomeFunc
@@ -91,5 +104,6 @@
             Console.Write("Hi!");
         }
     }
+
 
 }

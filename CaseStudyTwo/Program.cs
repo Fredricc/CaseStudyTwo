@@ -73,21 +73,36 @@
         //}
         static void Main(string[] args)
         {
-            int x = 0;
-            try
-            {
-                x /= x;
-                x += 1;
-            }
-            catch (Exception e)
-            {
-                x += 3;
-            }
-            finally
-            {
-                x += 4;
-                Console.WriteLine(x);
-            }
+            //int x = 0;
+            //try
+            //{
+            //    x /= x;
+            //    x += 1;
+            //}
+            //catch (Exception e)
+            //{
+            //    x += 3;
+            //}
+            //finally
+            //{
+            //    x += 4;
+            //    Console.WriteLine(x);
+            //}
+            List<int> li = new List<int>();
+            li.Add(59);
+            li.Add(72);
+            li.Add(95);
+            li.Add(5);
+            li.Add(9);
+            li.RemoveAt(1); // remove 72
+
+            Console.Write("\nList: ");
+            for (int x = 0; x < li.Count; x++)
+                Console.Write(li[x] + " "); // 59  95  5  9
+            li.Sort();
+            Console.Write("\nSorted: ");
+            for (int x = 0; x < li.Count; x++)
+                Console.Write(li[x] + " "); // 5  9  59  95
         }
     }
     public interface ISomeFunc

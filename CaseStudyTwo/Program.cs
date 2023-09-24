@@ -1,4 +1,6 @@
-﻿namespace CaseStudyTwo
+﻿using System.Collections;
+
+namespace CaseStudyTwo
 {
     internal class Program
     {
@@ -104,13 +106,90 @@
             //for (int x = 0; x < li.Count; x++)
             //    Console.Write(li[x] + " "); // 5  9  59  95
 
-            SortedList<string, int> pupil = new SortedList<string, int>();
-            pupil.Add("Bob", 11);
-            pupil.Add("Ann", 9);
-            pupil.Add("Mike", 12);
-            pupil.Remove("Ann");
-            foreach (string s in pupil.Keys)
-                Console.WriteLine(s + ": " + pupil[s]);
+            //SortedList<string, int> pupil = new SortedList<string, int>();
+            //pupil.Add("Bob", 11);
+            //pupil.Add("Ann", 9);
+            //pupil.Add("Mike", 12);
+            //pupil.Remove("Ann");
+            //foreach (string s in pupil.Keys)
+            //    Console.WriteLine(s + ": " + pupil[s]);
+
+            //BitArray ba1 = new BitArray(4);
+            //BitArray ba2 = new BitArray(4);
+
+            //ba1.SetAll(true);
+            //ba2.SetAll(false);
+
+            //ba1.Set(2, false);
+            //ba2.Set(3, true);
+
+            //PrintBarr("ba1", ba1);
+            //PrintBarr("ba2", ba2);
+            //Console.WriteLine();
+
+            //PrintBarr("ba1 AND ba2", ba1.And(ba2));
+            //PrintBarr("    NOT ba2", ba2.Not());
+
+            //BitArray ba3 = new BitArray(4);
+            //BitArray ba4 = new BitArray(4);
+            //ba3.SetAll(true);
+            //ba4.SetAll(false);
+            //ba3.Set(2, false);
+            //ba4.Set(3, true);
+            //Console.Write(ba3.And(ba4).Get(3));
+
+            //Stack<int> stk = new Stack<int>();
+
+            //stk.Push(59);
+            //stk.Push(72);
+            //stk.Push(65);
+
+            //Console.Write("Stack: ");
+            //foreach (int i in stk)
+            //{
+            //    Console.Write(i + " ");  // 65  72  59
+            //}
+            //Console.Write("\nCount: " + stk.Count);  // 3
+
+            //Console.Write("\nTop: " + stk.Peek());  // 65
+            //Console.Write("\nPop: " + stk.Pop());  // 65
+
+            //Console.Write("\nStack: ");
+            //foreach (int i in stk)
+            //    Console.Write(i + " ");  // 72  59
+            //Console.Write("\nCount: " + stk.Count);  // 2
+
+            //Queue<int> q = new Queue<int>();
+
+            //q.Enqueue(5);
+            //q.Enqueue(10);
+            //q.Enqueue(15);
+            //Console.Write("Queue: ");
+            //foreach (int i in q)
+            //    Console.Write(i + " ");  // 5  10  15
+            //Console.Write("\nCount: " + q.Count);  // 3
+
+            //Console.Write("\nDequeue: " + q.Dequeue()); // 5
+
+            //Console.Write("\nQueue: ");
+            //foreach (int i in q)
+            //    Console.Write(i + " ");  // 10  15
+            //Console.Write("\nCount: " + q.Count);  // 2
+
+            Queue<string> q = new Queue<string>();
+            q.Enqueue("A");
+            q.Enqueue("B");
+            q.Enqueue("C");
+            foreach (string s in q)
+                Console.Write(s + " ");
+        }
+
+        static void PrintBarr(string name, BitArray ba)
+        {
+            Console.Write(name + " : ");
+            for (int x = 0; x < ba.Length; x++)
+                Console.Write(ba.Get(x) + " ");
+            Console.WriteLine();
         }
     }
     public interface ISomeFunc

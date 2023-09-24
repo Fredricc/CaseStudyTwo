@@ -88,21 +88,29 @@
             //    x += 4;
             //    Console.WriteLine(x);
             //}
-            List<int> li = new List<int>();
-            li.Add(59);
-            li.Add(72);
-            li.Add(95);
-            li.Add(5);
-            li.Add(9);
-            li.RemoveAt(1); // remove 72
+            //List<int> li = new List<int>();
+            //li.Add(59);
+            //li.Add(72);
+            //li.Add(95);
+            //li.Add(5);
+            //li.Add(9);
+            //li.RemoveAt(1); // remove 72
 
-            Console.Write("\nList: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); // 59  95  5  9
-            li.Sort();
-            Console.Write("\nSorted: ");
-            for (int x = 0; x < li.Count; x++)
-                Console.Write(li[x] + " "); // 5  9  59  95
+            //Console.Write("\nList: ");
+            //for (int x = 0; x < li.Count; x++)
+            //    Console.Write(li[x] + " "); // 59  95  5  9
+            //li.Sort();
+            //Console.Write("\nSorted: ");
+            //for (int x = 0; x < li.Count; x++)
+            //    Console.Write(li[x] + " "); // 5  9  59  95
+
+            SortedList<string, int> pupil = new SortedList<string, int>();
+            pupil.Add("Bob", 11);
+            pupil.Add("Ann", 9);
+            pupil.Add("Mike", 12);
+            pupil.Remove("Ann");
+            foreach (string s in pupil.Keys)
+                Console.WriteLine(s + ": " + pupil[s]);
         }
     }
     public interface ISomeFunc

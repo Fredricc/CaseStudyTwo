@@ -183,18 +183,34 @@ namespace CaseStudyTwo
             //foreach (string s in q)
             //    Console.Write(s + " ");
 
-            Dictionary<string, int> d = new Dictionary<string, int>();
-            d.Add("Uno", 1);
-            d.Add("One", 1);
-            d.Add("Dos", 2);
-            d.Add("Deux", 2);
-            d.Remove("One");  // Remove key-value pair One, 1
-            d.Remove("Dos");  // Remove key-value pair Dos, 2
+            //Dictionary<string, int> d = new Dictionary<string, int>();
+            //d.Add("Uno", 1);
+            //d.Add("One", 1);
+            //d.Add("Dos", 2);
+            //d.Add("Deux", 2);
+            //d.Remove("One");  // Remove key-value pair One, 1
+            //d.Remove("Dos");  // Remove key-value pair Dos, 2
 
-            Console.WriteLine("Dictionary: ");
-            foreach (string s in d.Keys)
-                Console.WriteLine(s + ": " + d[s]);  // Uno: 1  Deux: 2
-            Console.WriteLine("\nCount: {0}", d.Count); // 2 
+            //Console.WriteLine("Dictionary: ");
+            //foreach (string s in d.Keys)
+            //    Console.WriteLine(s + ": " + d[s]);  // Uno: 1  Deux: 2
+            //Console.WriteLine("\nCount: {0}", d.Count); // 2 
+
+            HashSet<int> hs = new HashSet<int>();
+
+            hs.Add(5);
+            hs.Add(10);
+            hs.Add(15);
+            hs.Add(20);
+            Console.Write("\nHashSet: ");
+            foreach (int i in hs)
+                Console.Write(i + " ");  // 5  10  15  20  *elements may be in any order
+            Console.Write("\nCount: " + hs.Count);  // 4
+
+            HashSet<int> hs2 = new HashSet<int>();
+            hs2.Add(15);
+            hs2.Add(20);
+            Console.Write("\n{15, 20} is a subset of {5, 10, 15, 20}: " + hs2.IsSubsetOf(hs)); // True 
         }
 
         static void PrintBarr(string name, BitArray ba)
